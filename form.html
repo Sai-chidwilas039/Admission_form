@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form action="form">
+        
+        <h1>Admission Form</h1>
+        
+        <label for="date">Date:</label>
+        
+        <input type="date" id="date-input" required>
+        
+        <br><br>
+        <label for="Adn_no">Admission Number:</label>
+        
+        <input type="number" id="Number" class="no-border" maxlength="4" required>
+        
+        <br><br>
+        
+        <hr>
+        
+        <label for="Name">Name:</label>
+        
+        <input type="text" name="name" id="name" class="no-border" autocomplete="given-name" required>
+        
+        <br><br>
+        
+        <label for="Class">Class:</label>
+        
+        <input type="number" name="class" id="Class" class="no-border" maxlength="2" required>
+        
+        <label for="academicYear" id="academicYear">Academic Year:</label>
+        <input type="text" name="academicYear" pattern="\d{4}-\d{4}" placeholder="YYYY-YYYY" title="Enter a valid academic year (YYYY-YYYY)">
+
+        
+        <br><br>
+        
+        <label for="Date_of_birth">Date Of Birth:</label>
+        
+        <input type="date" name="date" id="Date" required>
+        
+        <label for="Aadhar_number" id="aadhar">Aadhar Number:</label>
+        
+        <input type="text" name="aadhar" maxlength="12" class="no-border" required>
+        
+        <br><br>
+        
+        <label for="Place_of_birth">Place of Birth:</label>
+        
+        <input type="text" id="place" class="no-border" required>
+        
+        <label for="State" id="State">State:</label>
+        
+        <input type="text" class="no-border" autcomplete="state" required>
+        
+        <br><br>
+        
+        <label for="nationality">Nationality:</label>
+        
+        <input type="text" id="nationality" class="no-border" required>
+        
+        <label for="Religion" id="religion">Religion:</label>
+        
+        <input type="text" class="no-border" autcomplete="religion" required>
+        
+        <br><br>
+        
+        <label for="Gender" class="gender">Gender:</label>
+        
+        <p class="gender">Male <label><input type="radio" name="radio"><span></span></label>Female<label><input type="radio" name="radio"><span></span></label> </p>
+        
+        <label for="caste"><h4>Caste:</h4></label>
+        
+        <input type="text" id="caste" class="no-border" required><br><br>
+        
+        <label for="address">Residential Address:</label>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea>
+        
+        <label for="pincode">Pincode:</label>
+        
+        <input type="number" name="pincode" id="Pincode" class="no-border" maxlength="6" required>
+        
+        <br><br>
+        
+        <label for="mother_tongue">Mother Tongue:</label>
+        
+        <input type="text" name="tongue" id="tongue" class="no-border" required>
+        
+        <label for="blood_group" id="blood">Blood group:</label>
+        
+        <input type="text" name="blood" class="no-border" required>
+        
+        <br><br>
+        
+        <label for="identification_marks">Identification marks:</label>
+        
+        1.<input type="text" name="i_marks" id="i_marks" class="no-border1" size="60" required><br>
+        <span style="margin-left: 168.5px;">2.</span><input type="text" size="60" name="i_marks" id="i_marks" class="no-border2" required>
+        
+        <br><br>
+        
+        <h4 style="margin-left: 10px;">Previous academic record:</h4>
+        <br>         
+        <table>
+            <tr>
+                <th>Name of the previous school</th>
+                <th>Class</th>
+                <th>Year of Study</th>
+                <th>Percentage/Grade</th>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text" maxlength="2"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text" maxlength="2"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+        
+        <br><br>
+        
+        <input type="submit" value="Submit">
+        <button id="downloadCsv">Download</button>
+    </form>
+        
+    
+    <br>
+   
+    
+    <input type="file" id="fileInput" style="display: none;">
+
+    <script src="form.js"></script>
+</body>
+</html>
