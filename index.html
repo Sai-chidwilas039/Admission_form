@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <form action="form">
+
+    <form id="form" method="POST" action="/submit-form">
         
         <h1>Admission Form</h1>
         
@@ -34,7 +35,7 @@
         
         <input type="number" name="class" id="Class" class="no-border" maxlength="2" required>
         
-        <label for="academicYear" id="academicYear">Academic Year:</label>
+        <label for="academicYear" id="form">Academic Year:</label>
         <input type="text" name="academicYear" pattern="\d{4}-\d{4}" placeholder="YYYY-YYYY" title="Enter a valid academic year (YYYY-YYYY)">
 
         
@@ -79,9 +80,9 @@
         <input type="text" id="caste" class="no-border" required><br><br>
         
         <label for="address">Residential Address:</label>
-        <textarea id="address" name="address" rows="4" cols="50"></textarea>
+        <textarea id="address" name="address" rows="4" cols="50" autocomplete="address-line1"></textarea>
         
-        <label for="pincode">Pincode:</label>
+        <label for="pincode" id="form">Pincode:</label>
         
         <input type="number" name="pincode" id="Pincode" class="no-border" maxlength="6" required>
         
@@ -99,8 +100,8 @@
         
         <label for="identification_marks">Identification marks:</label>
         
-        1.<input type="text" name="i_marks" id="i_marks" class="no-border1" size="60" required><br>
-        <span style="margin-left: 168.5px;">2.</span><input type="text" size="60" name="i_marks" id="i_marks" class="no-border2" required>
+        1.<input type="text" name="i1_marks" id="i_marks" class="no-border1" size="60" required><br>
+        <span style="margin-left: 168.5px;">2.</span><input type="text" size="60" name="i_marks" id="i2_marks" class="no-border2" required>
         
         <br><br>
         
@@ -130,14 +131,12 @@
         <br><br>
         
         <input type="submit" value="Submit">
-        <button id="downloadCsv">Download</button>
     </form>
         
     
     <br>
    
     
-    <input type="file" id="fileInput" style="display: none;">
 
     <script src="form.js"></script>
 </body>
